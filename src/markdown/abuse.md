@@ -22,7 +22,7 @@ To report abuse, please follow these steps:
 Examples that are subject of being reported include:
 
 - Any illegal activities
-- Breaching the [Terms of Service](/terms-of-service)
+- Breaching the [Terms and Conditions](/terms-and-conditions)
 - Fraudulent behavior and scams
 - Harassment or cyberbullying
 - Hate speech or discriminatory content
