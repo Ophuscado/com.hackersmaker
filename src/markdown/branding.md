@@ -3,6 +3,6 @@
 <!-- language: en -->
 <!-- title: Branding -->
 
-## Branding
+# Branding
 
 This page is not ready yet.
