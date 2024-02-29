@@ -13,7 +13,7 @@ To report abuse, please follow these steps:
 
 1. **Document the issue:** Collect any details related to the suspicious content, including URLs, timestamps, and descriptions of the issue.
 
-2. **Contact Us:** Email [abuse@hackersmaker.com](mailto:abuse@hackersmaker.com) with the subject line "Abuse Report." Please provide as much contextual information as possible.
+2. **Contact Us:** Email [support@hackersmaker.com](mailto:support@hackersmaker.com) with the subject line "Abuse Report." Please provide as much contextual information as possible.
 
 3. **Confidentiality:** Your report will be handled with the utmost confidentiality. If the case requires a follow-up, we will contact you afterward.
 
