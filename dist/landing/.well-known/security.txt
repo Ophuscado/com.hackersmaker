@@ -1,0 +1,7 @@
+Acknowledgments: https://hackersmaker.com/contributors
+Canonical: https://hackersmaker.com/.well-known/security.txt
+Contact: mailto:security@hackersmaker.com
+Expires: Sat, 31 Dec 2029 23:59 +0000
+Encryption: https://hackersmaker.com/.well-known/security.pub
+Preferred-Languages: en, es, zh
+Policy: https://hackersmaker.com/security
