@@ -1,0 +1,4 @@
+.DS_Store
+__pyenv__/
+__pycache__/
+.gitignored/

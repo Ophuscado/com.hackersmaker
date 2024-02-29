@@ -1,0 +1,6 @@
+fastapi
+flet
+flet-fastapi
+lxml
+markdown
+uvicorn
