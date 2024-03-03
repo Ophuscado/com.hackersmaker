@@ -3,4 +3,5 @@ flet
 flet-fastapi
 lxml
 markdown
+python-dotenv
 uvicorn
