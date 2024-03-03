@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" class="h-full antialiased dark overscroll-none" style="color-scheme: dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="{{ SITE_URL }}/{{ slug }}">
+  <title>{% if title %}{{ title }} — {% endif %}{{ SITE_TITLE }}</title>
+  {% if created %}
+  <meta property="article:published_time" content="{{ created }}">
+  {% endif %}
+  {% if modified %}
+  <meta property="article:modified_time" content="{{ modified }}">
+  {% endif %}
+  {% if description %}
+  <meta name="description" content="{{ description }}">
+  {% endif %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio,line-clamp"></script>
+  <script>
+    !(function () { try { var d = document.documentElement, c = d.classList; c.remove("light", "dark"); var e = localStorage.getItem("theme"); if ("system" === e || (!e && true)) { var t = "(prefers-color-scheme: dark)", m = window.matchMedia(t); if (m.media !== t || m.matches) { d.style.colorScheme = "dark"; c.add("dark"); } else { d.style.colorScheme = "light"; c.add("light"); } } else if (e) { c.add(e || ""); } if (e === "light" || e === "dark") d.style.colorScheme = e; } catch (e) { } })();
+  </script>
+</head>
+
+<body class="flex min-h-full flex-col bg-white dark:bg-gray-950">
+  <div class="relative flex-none overflow-hidden px-6 lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex lg:px-0">
+    <!-- Gradient -->
+    <div class="absolute inset-0 -z-10 overflow-hidden bg-gray-950 lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem]">
+      <svg class="absolute -bottom-48 left-[-40%] h-[80rem] w-[180%] lg:-right-40 lg:bottom-auto lg:left-auto lg:top-[-40%] lg:h-[180%] lg:w-[80rem]" aria-hidden="true">
+        <defs>
+          <radialGradient id=":S1:-desktop" cx="100%">
+            <stop offset="0%" stop-color="rgba({{ GRADIENT_A }})"></stop>
+            <stop offset="53.95%" stop-color="rgba({{ GRADIENT_B }})"></stop>
+            <stop offset="100%" stop-color="rgba({{ GRADIENT_C }})"></stop>
+          </radialGradient>
+          <radialGradient id=":S1:-mobile" cy="100%">
+            <stop offset="0%" stop-color="rgba({{ GRADIENT_A }})"></stop>
+            <stop offset="53.95%" stop-color="rgba({{ GRADIENT_B }})"></stop>
+            <stop offset="100%" stop-color="rgba({{ GRADIENT_C }})"></stop>
+          </radialGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#:S1:-desktop)" class="hidden lg:block"></rect>
+        <rect width="100%" height="100%" fill="url(#:S1:-mobile)" class="lg:hidden"></rect>
+      </svg>
+      <div class="absolute inset-x-0 bottom-0 right-0 h-px bg-white mix-blend-overlay lg:left-auto lg:top-0 lg:h-auto lg:w-px"></div>
+    </div>
+    <!-- //Gradient -->
+    <div class="relative flex w-full lg:pointer-events-auto lg:mr-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-y-auto lg:overflow-x-hidden lg:pl-[max(4rem,calc(50%-38rem))]">
+      <div class="mx-auto max-w-lg lg:mx-0 lg:flex lg:w-96 lg:max-w-none lg:flex-col lg:before:flex-1 lg:before:pt-6">
+        <div class="pb-16 pt-20 sm:pb-20 sm:pt-32 lg:py-20">
+          <div class="relative">
+            <!-- Header -->
+            <div>
+              <a href="{{ SITE_URL }}">
+                <img src="{{ LOGO_PATH }}" class="inline-block h-16 w-auto">
+              </a>
+            </div>
+            <h1 class="mt-14 font-display text-4xl/tight font-light text-white">
+              {{ LANDING_TITLE_A }}
+              <span class="text-{{ COLOR }}-300">
+                {{ LANDING_TITLE_B }}
+              </span>
+            </h1>
+            <p class="mt-4 text-sm/6 text-gray-300">
+              {{ LANDING_DESCRIPTION }}
+            </p>
+            <!-- //Header -->
+            <!-- CTA -->
+            <form class="relative isolate mt-8 flex items-center pr-1">
+              <label for=":S3:" class="sr-only">
+                Email address
+              </label>
+              <input autofocus required="" type="email" autocomplete="email" id=":S3:" placeholder="Email address" class="peer w-0 flex-auto bg-transparent px-4 py-2.5 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-[0.8125rem]/6" name="email">
+              <button class="group relative isolate flex-none rounded-md py-1.5 text-[0.8125rem]/6 font-semibold text-white pl-2.5 pr-[calc(9/16*1rem)]" type="submit">
+                <span class="absolute inset-0 rounded-md bg-gradient-to-b from-white/80 to-white opacity-10 transition-opacity group-hover:opacity-15"></span>
+                <span class="absolute inset-0 rounded-md opacity-7.5 shadow-[inset_0_1px_1px_white] transition-opacity group-hover:opacity-10"></span>
+                Start now
+                <span aria-hidden="true">
+                  →
+                </span>
+              </button>
+              <div class="absolute inset-0 -z-10 rounded-lg transition peer-focus:ring-4 peer-focus:ring-{{ COLOR }}-300/15"></div>
+              <div class="absolute inset-0 -z-10 rounded-lg bg-white/2.5 ring-1 ring-white/15 transition peer-focus:ring-{{ COLOR }}-300"></div>
+            </form>
+            <!-- //CTA -->
+            <!-- Navigation -->
+            <div class="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  <i class="fa-solid fa-house"></i>
+                </span>
+              </a>
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}/features">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  Features
+                </span>
+              </a>
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}/help-center">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  Help Center
+                </span>
+              </a>
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}/news">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  News
+                </span>
+              </a>
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}/pricing">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  Pricing
+                </span>
+              </a>
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}/privacy-policy">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  Privacy Policy
+                </span>
+              </a>
+              <a class="flex-none group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-3" href="{{ SITE_URL }}/terms-and-conditions">
+                <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+                <span class="self-baseline text-white">
+                  Terms and Conditions
+                </span>
+              </a>
+            </div>
+            <!-- //Navigation -->
+          </div>
+        </div>
+        <div class="flex flex-1 items-end justify-center pb-4 lg:justify-start lg:pb-6">
+          <!-- Footnote -->
+          <p class="flex items-baseline gap-x-2 text-[0.8125rem]/6 text-gray-500">
+            Handmade by
+            <a class="group relative isolate flex items-center rounded-lg px-2 py-0.5 text-[0.8125rem]/6 font-medium text-white/30 transition-colors hover:text-{{ COLOR }}-300 gap-x-2" href="https://ophuscado.com" target="_blank">
+              <span class="absolute inset-0 -z-10 scale-75 rounded-lg bg-white/5 opacity-0 transition group-hover:scale-100 group-hover:opacity-100"></span>
+              <i class="fa-solid fa-computer"></i>
+              <span class="self-baseline text-white">
+                Ophuscado LLC{% if SITE_TITLE != "Ophuscado" %}, dba {{ SITE_TITLE }}{% endif %}
+              </span>
+            </a>
+          </p>
+          <!-- //Footnote -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="group absolute right-4 top-4 z-50 -m-2.5 p-2.5">
+    <span class="sr-only">
+      Switch to light theme
+    </span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-white opacity-50 transition-opacity group-hover:opacity-100 lg:fill-gray-900 lg:dark:fill-white">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm-5-8a5 5 0 0 0 5 5V7a5 5 0 0 0-5 5Z"></path>
+    </svg>
+  </button>
+  <div class="relative flex-auto">
+    <div class="pointer-events-none absolute inset-0 z-50 overflow-hidden lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] lg:overflow-visible">
+      <svg class="absolute left-[max(0px,calc(50%-18.125rem))] top-0 h-full w-1.5 lg:left-full lg:ml-1 xl:left-auto xl:right-1 xl:ml-0" aria-hidden="true">
+        <defs>
+          <pattern id=":S4:" width="6" height="8" patternUnits="userSpaceOnUse">
+            <path d="M0 0H6M0 8H6" class="stroke-{{ COLOR }}-900/10 xl:stroke-white/10 dark:stroke-white/10" fill="none"></path>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#:S4:)"></rect>
+      </svg>
+    </div>
+    <main class="space-y-20 py-20 sm:space-y-32 sm:py-32">
+      <article id="commit-message-suggestions" class="scroll-mt-16" style="padding-bottom: 0px">
+        <div>
+          <header class="relative mb-10 xl:mb-0">
+            <div class="pointer-events-none absolute left-[max(-0.5rem,calc(50%-18.625rem))] top-0 z-50 flex h-4 items-center justify-end gap-x-2 lg:left-0 lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] xl:h-8">
+              <a class="inline-flex" href="#commit-message-suggestions">
+                <time datetime="{{ modified or created }}" class="hidden xl:pointer-events-auto xl:block xl:text-2xs/4 xl:font-medium xl:text-white/50">
+                  {{ modified or created }}
+                </time>
+              </a>
+              <div class="h-[0.0625rem] w-3.5 bg-gray-400 lg:-mr-3.5 xl:mr-0 xl:bg-gray-300"></div>
+            </div>
+            <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+              <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+                <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto">
+                  <div class="flex">
+                    <a class="inline-flex" href="#commit-message-suggestions">
+                      <time datetime="{{ modified or created }}" class="text-2xs/4 font-medium text-gray-500 xl:hidden dark:text-white/50">
+                        {{ modified or created }}
+                      </time>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+            <div class="lg:ml-96 lg:flex lg:w-full lg:justify-end lg:pl-32">
+              <div class="mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto typography prose dark:prose-invert" data-mdx-content="true">
+                <div class="relative mt-8 overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900 [&amp;+*]:mt-8">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10"></div>
+                </div>
+                {{ content }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+
+</html>
